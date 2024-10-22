@@ -1,0 +1,22 @@
+{
+  "$schema": "https://dl.viam.dev/module.schema.json",
+  "module_id": "james:galil",
+  "visibility": "private",
+  "url": "",
+  "description": "A Viam module implementing the stepper motors behind a Galil DMC4000 series motor controller",
+  "models": [
+    {
+      "api": "rdk:component:motor",
+      "model": "james:galil:dmc4000"
+    }
+  ],
+  "entrypoint": "bin/galil",
+  "build": {
+    "build": "make --always-make module.tar.gz",
+    "arch": [
+      "linux/amd64",
+      "linux/arm64",
+      "darwin/arm64"
+    ]
+  }
+}
